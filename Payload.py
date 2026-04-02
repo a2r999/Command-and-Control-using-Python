@@ -35,8 +35,8 @@ def main():
             
             if cmd == "exit":
                 break
-                
-            # File Download
+
+            
             if cmd.startswith("download"):
                 try:
                     
