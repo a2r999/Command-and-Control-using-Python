@@ -25,7 +25,7 @@ def main():
         'stdin': sb.PIPE
     }
     
-    #  ONLY for Windows
+    #  ONLY for Windows OS
     if os.name == 'nt':
         sb_args['creationflags'] = 0x08000000 
 
