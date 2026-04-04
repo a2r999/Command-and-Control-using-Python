@@ -1,7 +1,7 @@
 PyC2 : Lightweight Command & Control tool
 Author: Abhijit Rekhi
-Status: Prototype
 
+Status : Protoype
 Overview
 This repository contains a lightweight, synchronous Python Command and Control (C2) framework. It was developed to demonstrate the fundamental networking mechanics of remote administration tools and malware, specifically focusing on socket programming, JSON-based metadata handshakes, and binary chunking for file exfiltration.
 
