@@ -1,4 +1,5 @@
-PyC2 : Lightweight Command & Control tool
+PyC2 : Lightweight Command & Control tool.
+
 Author: Abhijit Rekhi
 
 
