@@ -6,7 +6,7 @@ Author: Abhijit Rekhi
 This repository contains a lightweight, synchronous Python Command and Control (C2) framework. It was developed to demonstrate the fundamental networking mechanics of remote administration tools and malware, specifically focusing on socket programming, JSON-based metadata handshakes, and binary chunking for file exfiltration.
 
 
-Architecture
+## Architecture
 The tool consists of three standalone Python scripts:
  * scanner.py: A minimalist TCP port scanner used for initial network reconnaissance. Applies targeted timeouts to rapidly identify listening C2 servers or vulnerable services.
  * listener.py: The central C2 server. It binds to a designated port, accepts incoming connections from the payload, and provides an interactive shell. It handles JSON-structured data to seamlessly switch between standard stdout/stderr streams and binary file transfer modes.
@@ -17,24 +17,25 @@ Features
  * Reliable File Exfiltration: Custom file-transfer implementation that handles large files by sending data in 4096-byte chunks, preventing memory buffer overflows.
  * Structured Handshakes: Uses JSON for metadata transfer (filename, filesize) prior to raw binary transmission, ensuring the listener correctly parses incoming data streams.
  * Cross-Platform Capability: Core networking logic relies exclusively on Python standard libraries, making it compatible across Windows, Linux, and macOS environments.
-Setup & Installation
+
+## Setup & Installation
 It is recommended to run this framework within an isolated virtual environment.
-# 1. Clone the repository and navigate to the directory
+1. Clone the repository and navigate to the directory
 mkdir C2_Project && cd C2_Project
 
-# 2. Initialize a Python virtual environment
+2. Initialize a Python virtual environment
 python -m venv .venv
 
-# 3. Activate the environment
-# On Windows:
+3. Activate the environment
+ On Windows:
 .venv\Scripts\activate
-# On Linux/macOS:
+ On Linux/macOS:
 source .venv/bin/activate
 
-# 4. Ensure pip is updated (no external dependencies required)
+4. Ensure pip is updated (no external dependencies required)
 python -m pip install --upgrade pip
 
-Usage Guide
+## Usage Guide
 1. Initial Reconnaissance (Optional)
 Use the scanner to verify target status or confirm your listener port is open.
 python scanner.py <TARGET_IP>
@@ -45,10 +46,10 @@ python listener.py
 
 3. Deploy the Payload
 Execute the payload on the target machine. Ensure the CALLBACK_IP variable in the script is set to the Listener's IP address.
-# Standard execution
+## Standard execution
 python payload.py
 
-# Stealth execution (Windows only, requires .pyw extension)
+## Stealth execution (Windows only, requires .pyw extension)
 pythonw payload.pyw
 
 4. Interacting and Exfiltrating
@@ -59,5 +60,5 @@ Once the connection is established, the Listener will drop into an interactive s
 
  * Terminate: Use the exit command to safely terminate the connection.
 
-⚠️ Legal & Ethical Disclaimer
-This toolkit is strictly for educational purposes and authorized Red Team engagements. Do not deploy this software on any network or system where you do not have explicit, documented permission. The authors and associated entities assume no liability for misuse.
+## ⚠️ Legal & Ethical Disclaimer
+This tool is strictly for educational purposes and authorized Red Team engagements. Do not deploy this software on any network or system where you do not have explicit, documented permission. The authors and associated entities assume no liability for misuse.
