@@ -45,7 +45,7 @@ python listener.py
 
 3. Deploy the Payload
 Execute the payload on the target machine. Ensure the CALLBACK_IP variable in the script is set to the Listener's IP address.
-# Standard execution (visible console for debugging)
+# Standard execution
 python payload.py
 
 # Stealth execution (Windows only, requires .pyw extension)
