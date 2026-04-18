@@ -32,8 +32,6 @@ python -m venv .venv
  On Linux/macOS:
 source .venv/bin/activate
 
-4. Ensure pip is updated (no external dependencies required)
-python -m pip install --upgrade pip
 
 ## Usage Guide
 1. Initial Reconnaissance
