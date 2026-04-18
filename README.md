@@ -36,7 +36,7 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 
 ## Usage Guide
-1. Initial Reconnaissance (Optional)
+1. Initial Reconnaissance
 Use the scanner to verify target status or confirm your listener port is open.
 python scanner.py <TARGET_IP>
 
